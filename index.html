@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2-list stable matching</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Nil Mamano">
+    <meta name="description" content="2-list stable matching visualization"
+    <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </style>
+</head>
+
+
+<body>
+<canvas tabindex='1' id="canvas1" width="900" height="420">
+    Your browser does not support HTML5 canvas.
+</canvas>
+
+
+<label id="mennum" style="position: absolute; top: 420px; left: 150px;">Number of men: 10</label>
+<label id="womnum" style="position: absolute; top: 420px; left: 580px;">Number of women: 10</label>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="twolistmatching.js"></script>
+<script src="node_modules_lib/viz.js/viz.js"></script>
+<script src="node_modules_lib/viz.js/full.render.js"></script>
+<!-- <script src="visualize.js"></script> -->
+
+<br>
+<br>
+<style>
+label textarea{
+ vertical-align: middle;
+}
+</style>
+<button type="button" onclick="displayManOpt()">Display man-optimal matching</button>
+<br><br>
+<label>Input Size: <textarea style="resize:none" rows="1" cols="10" autofocus maxlength="4" id="inputsize"></textarea></label>
+
+<button type="button" onclick="generateRandom()">Generate random</button>
+<br>
+<br>
+<label>Input: <textarea style="resize:none" rows="1" cols="100" autofocus maxlength="4000" id="setinput"></textarea></label>
+
+<button type="button" onclick="setInput()">Set input</button>
+<br><br>
+<button type="button" onclick="getInput()">Print input</button>
+<label id="inputtext"></label>
+<br><br>
+<button type="button" onclick="spacePoints()">Space points</button>
+<br><br>
+    <label id="about">
+About:<br>
+- Men are shown on the left. Women are shown on the right.<br>
+- x-preferring people are shown in red and labeled with 'X'. y-preferring people are shown in blue and labeled with 'Y'.<br>
+- Top-people (people with the max 'x' or 'y' among people with the same gender and preference) are labeled with the coordinate for which they are the top next to them.<br>
+- Soul-mates (people that are the first choice of their first choice) are colored green.<br><br>
+Actions:<br>
+- Double-click to add an x-preferring person. (Hold CTRL to add a y-preferring person.)<br>
+- Double-click on a person to change its preference.<br>
+- Click a person to select him/her. If there is the same number of men and women, then his/her stable pairs (the people he/she can be matched to in some stable matching) will be highlighted.<br>
+- Drag to change its position.<br>
+- Press DEL to remove the selected person. (if the selected person has a soulmate, it is also deleted. Hold CTRL to prevent this.)<br>
+- To save the current configuration, click 'Print input' and copy the string. To restore that configuration, paste it into the 'Input:' field, and click 'Set input'.<br>
+- Click 'Space points' to space the points evenly without modifying the preference lists.<br>
+</label>
+</body>
+</html>
