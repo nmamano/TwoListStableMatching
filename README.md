@@ -4,7 +4,7 @@ https://nmamano.github.io/TwoListStableMatching/index.html
 
 **tldr:** an interactive tool to explore an open problem in algorithms known as the "two-list stable matching problem".
 
-[![Illustration](illustration.PNG "Illustration")](https://nmamano.github.io/TwoListStableMatching/index.html)
+[![Illustration](illustration.PNG "Geometric interpretation. The green pair is the only pair with each other as first choice.")](https://nmamano.github.io/TwoListStableMatching/index.html)
 
 ## Some background
 The [stable matching / stable marriage problem](https://en.wikipedia.org/wiki/Stable_marriage_problem) is a central problem in market design. The setting is as follows: there are two sets of agents, traditionally callen "men" and "women", which need to be paired in a one-to-one matching. Each agent has its own list of all the agents in the other set, ordered according to its own *individual* preference. Given the preference lists of all the agents, the goal is to find a matching that is *stable*: a matching such that there is no pair consisting of a man and a woman who are not matched to each other, but both prefer each other over their assigned partners in the matching.
